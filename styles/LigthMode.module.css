@@ -119,6 +119,11 @@ input:checked + .slider:before {
   border-bottom-right-radius: 5px;
 }
 
+.card:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
 .card .facebook {
   width: 100%;
   height: 0.6vh;
@@ -160,7 +165,7 @@ input:checked + .slider:before {
   align-items: center;
   font-size: 0.7rem;
   justify-content: space-evenly;
-  width: 30%;
+  width: 50%;
   height: auto;
 }
 
@@ -214,6 +219,12 @@ input:checked + .slider:before {
   flex-wrap: wrap;
   margin-left: 12%;
 }
+
+.overview__card:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
 .overview__card {
   background-color: hsl(227, 47%, 96%);
   width: 15rem;
@@ -321,6 +332,11 @@ input:checked + .slider:before {
     margin-left: 0;
   }
 
+  .card:hover {
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+
   .overview__cards {
     width: 90%;
     margin-left: 1.2rem;
@@ -333,6 +349,12 @@ input:checked + .slider:before {
     width: 90%;
     margin-left: 0;
   }
+
+  .overview__card:hover {
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+
   .overview__title {
     display: flex;
     align-items: center;

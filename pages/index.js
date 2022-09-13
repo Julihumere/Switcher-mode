@@ -2,7 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { useState } from "react";
-import LigthMode from "../LigthMode/LightMode";
+import LigthMode from "./Components/LigthMode/LightMode.js";
+import user from "./Components/Info.json";
 
 export default function Home() {
   const [mode, setMode] = useState(true);
@@ -34,207 +35,102 @@ export default function Home() {
             </div>
           </header>
           <div className={styles.cards}>
-            <div className={styles.card}>
-              <span className={styles.facebook}></span>
-              <h4>
-                <Image src="/images/icon-facebook.svg" width={20} height={20} />
-                @nathanf
-              </h4>
-              <h1>1987</h1>
-              <h2>FOLLOWERS</h2>
-              <h3>
-                <Image src="/images/icon-up.svg" width={8} height={4} />
-                12 Today
-              </h3>
-            </div>
-            <div className={styles.card}>
-              <span className={styles.twitter}></span>
-              <h4>
-                <Image src="/images/icon-twitter.svg" width={20} height={20} />
-                @nathanf
-              </h4>
-              <h1>1044</h1>
-              <h2>FOLLOWERS</h2>
-              <h3>
-                <Image src="/images/icon-up.svg" width={8} height={4} />
-                99 Today
-              </h3>
-            </div>
-            <div className={styles.card}>
-              <span className={styles.instagram}></span>
-              <h4>
-                <Image
-                  src="/images/icon-instagram.svg"
-                  width={20}
-                  height={20}
-                />
-                @realnathanf
-              </h4>
-              <h1>11k</h1>
-              <h2>FOLLOWERS</h2>
-              <h3>
-                <Image src="/images/icon-up.svg" width={8} height={4} />
-                1099 Today
-              </h3>
-            </div>
-            <div className={styles.card}>
-              <span className={styles.youtube}></span>
-              <h4>
-                <Image src="/images/icon-youtube.svg" width={20} height={20} />
-                @nathanf
-              </h4>
-              <h1>8239</h1>
-              <h2>SUBSCRIBERS</h2>
-              <h3 className={styles.down}>
-                <Image src="/images/icon-down.svg" width={8} height={4} />
-                144 Today
-              </h3>
-            </div>
+            {user &&
+              user.user.map((e) => (
+                <div className={styles.card}>
+                  {e.socialMedia === "facebook" ? (
+                    <span className={styles.facebook}></span>
+                  ) : e.socialMedia === "twitter" ? (
+                    <span className={styles.twitter}></span>
+                  ) : e.socialMedia === "instagram" ? (
+                    <span className={styles.instagram}></span>
+                  ) : e.socialMedia === "youtube" ? (
+                    <span className={styles.youtube}></span>
+                  ) : null}
+                  <h4>
+                    {e.socialMedia === "facebook" ? (
+                      <Image
+                        src="/images/icon-facebook.svg"
+                        width={20}
+                        height={20}
+                      />
+                    ) : e.socialMedia === "twitter" ? (
+                      <Image
+                        src="/images/icon-twitter.svg"
+                        width={20}
+                        height={20}
+                      />
+                    ) : e.socialMedia === "instagram" ? (
+                      <Image
+                        src="/images/icon-instagram.svg"
+                        width={20}
+                        height={20}
+                      />
+                    ) : e.socialMedia ? (
+                      <Image
+                        src="/images/icon-youtube.svg"
+                        width={20}
+                        height={20}
+                      />
+                    ) : null}
+                    {e.userName}
+                  </h4>
+                  <h1>{e.followers}</h1>
+                  <h2>{e.type}</h2>
+                  {e.lastUpdate === "up" ? (
+                    <h3 className={styles.up}>
+                      <Image src="/images/icon-up.svg" width={8} height={4} />
+                      {e.lastFollowers}
+                      Today
+                    </h3>
+                  ) : (
+                    <h3 className={styles.down}>
+                      <Image src="/images/icon-down.svg" width={8} height={4} />
+                      {e.lastFollowers} Today
+                    </h3>
+                  )}
+                </div>
+              ))}
           </div>
           <div className={styles.overview__container}>
             <h1 className={styles.overview__title}>Overview - Today</h1>
             <div className={styles.overview__cards}>
-              <div className={styles.overview__card}>
-                <div className={styles.overview__card__top}>
-                  <h4>Page Views</h4>{" "}
-                  <Image
-                    src="/images/icon-facebook.svg"
-                    width={20}
-                    height={20}
-                  />
-                </div>
-                <div className={styles.overview__card__bottom}>
-                  <h1>87</h1>
-                  <h4>
-                    <Image src="/images/icon-up.svg" width={8} height={4} />
-                    3%
-                  </h4>
-                </div>
-              </div>
-              <div className={styles.overview__card}>
-                <div className={styles.overview__card__top}>
-                  <h4>Likes</h4>{" "}
-                  <Image
-                    src="/images/icon-facebook.svg"
-                    width={20}
-                    height={20}
-                  />
-                </div>
-                <div className={styles.overview__card__bottom}>
-                  <h1>52</h1>
-                  <h4 className={styles.down}>
-                    <Image src="/images/icon-down.svg" width={8} height={4} />
-                    2%
-                  </h4>
-                </div>
-              </div>
-              <div className={styles.overview__card}>
-                <div className={styles.overview__card__top}>
-                  <h4>Likes</h4>{" "}
-                  <Image
-                    src="/images/icon-instagram.svg"
-                    width={20}
-                    height={20}
-                  />
-                </div>
-                <div className={styles.overview__card__bottom}>
-                  <h1>5462</h1>
-                  <h4>
-                    <Image src="/images/icon-up.svg" width={8} height={4} />
-                    2257%
-                  </h4>
-                </div>
-              </div>
-              <div className={styles.overview__card}>
-                <div className={styles.overview__card__top}>
-                  <h4>Profile views</h4>{" "}
-                  <Image
-                    src="/images/icon-instagram.svg"
-                    width={20}
-                    height={20}
-                  />
-                </div>
-                <div className={styles.overview__card__bottom}>
-                  <h1>52k</h1>
-                  <h4>
-                    <Image src="/images/icon-up.svg" width={8} height={4} />
-                    1375%
-                  </h4>
-                </div>
-              </div>
-              <div className={styles.overview__card}>
-                <div className={styles.overview__card__top}>
-                  <h4>Retweets</h4>{" "}
-                  <Image
-                    src="/images/icon-twitter.svg"
-                    width={20}
-                    height={20}
-                  />
-                </div>
-                <div className={styles.overview__card__bottom}>
-                  <h1>117</h1>
-                  <h4>
-                    <Image src="/images/icon-up.svg" width={8} height={4} />
-                    303%
-                  </h4>
-                </div>
-              </div>
-              <div className={styles.overview__card}>
-                <div className={styles.overview__card__top}>
-                  <h4>Likes</h4>{" "}
-                  <Image
-                    src="/images/icon-twitter.svg"
-                    width={20}
-                    height={20}
-                  />
-                </div>
-                <div className={styles.overview__card__bottom}>
-                  <h1>507</h1>
-                  <h4>
-                    <Image src="/images/icon-up.svg" width={8} height={4} />
-                    553%
-                  </h4>
-                </div>
-              </div>
-              <div className={styles.overview__card}>
-                <div className={styles.overview__card__top}>
-                  <h4>Likes</h4>{" "}
-                  <Image
-                    src="/images/icon-youtube.svg"
-                    width={20}
-                    height={20}
-                  />
-                </div>
-                <div className={styles.overview__card__bottom}>
-                  <h1>107</h1>
-                  <h4 className={styles.down}>
-                    <Image src="/images/icon-down.svg" width={8} height={4} />
-                    19%
-                  </h4>
-                </div>
-              </div>
-              <div className={styles.overview__card}>
-                <div className={styles.overview__card__top}>
-                  <h4>Total views</h4>{" "}
-                  <Image
-                    src="/images/icon-youtube.svg"
-                    width={20}
-                    height={20}
-                  />
-                </div>
-                <div className={styles.overview__card__bottom}>
-                  <h1>1407</h1>
-                  <h4 className={styles.down}>
-                    <Image src="/images/icon-down.svg" width={8} height={4} />
-                    12%
-                  </h4>
-                </div>
-              </div>
+              {user &&
+                user.Overview.map((e) => (
+                  <div className={styles.overview__card}>
+                    <div className={styles.overview__card__top}>
+                      <h4>{e.type}</h4>{" "}
+                      <Image src={e.icon} width={20} height={20} />
+                    </div>
+                    <div className={styles.overview__card__bottom}>
+                      <h1>{e.number}</h1>
+                      {e.lastUpdate === "up" ? (
+                        <h4 className={styles.up}>
+                          <Image
+                            src="/images/icon-up.svg"
+                            width={8}
+                            height={4}
+                          />
+                          {e.percent}%
+                        </h4>
+                      ) : (
+                        <h4 className={styles.down}>
+                          <Image
+                            src="/images/icon-down.svg"
+                            width={8}
+                            height={4}
+                          />
+                          {e.percent}%
+                        </h4>
+                      )}
+                    </div>
+                  </div>
+                ))}
             </div>
           </div>
         </div>
       ) : (
-        <LigthMode />
+        <LigthMode setMode={setMode} mode={mode} />
       )}
     </div>
   );

@@ -1,0 +1,94 @@
+{
+  "user": [
+    {
+      "socialMedia": "facebook",
+      "userName": "@julihumere",
+      "type": "Followers",
+      "followers": 1987,
+      "lastFollowers": 12,
+      "lastUpdate": "up"
+    },
+    {
+      "socialMedia": "twitter",
+      "userName": "@julihumere",
+      "type": "Followers",
+      "followers": 1044,
+      "lastFollowers": 99,
+      "lastUpdate": "up"
+    },
+    {
+      "socialMedia": "instagram",
+      "userName": "juli_humere",
+      "type": "Followers",
+      "followers": "11k",
+      "lastFollowers": 1099,
+      "lastUpdate": "up"
+    },
+    {
+      "socialMedia": "youtube",
+      "userName": "Juli Humere",
+      "type": "Subscribers",
+      "followers": "8239",
+      "lastFollowers": 144,
+      "lastUpdate": "down"
+    }
+  ],
+  "Overview": [
+    {
+      "type": "Page views",
+      "icon": "/images/icon-facebook.svg",
+      "number": 87,
+      "percent": 3,
+      "lastUpdate": "up"
+    },
+    {
+      "type": "Likes",
+      "icon": "/images/icon-facebook.svg",
+      "number": 52,
+      "percent": 2,
+      "lastUpdate": "down"
+    },
+    {
+      "type": "Likes",
+      "icon": "/images/icon-instagram.svg",
+      "number": 5462,
+      "percent": 2257,
+      "lastUpdate": "up"
+    },
+    {
+      "type": "Profile views",
+      "icon": "/images/icon-instagram.svg",
+      "number": "52k",
+      "percent": 1375,
+      "lastUpdate": "up"
+    },
+    {
+      "type": "Retweets",
+      "icon": "/images/icon-twitter.svg",
+      "number": 117,
+      "percent": 303,
+      "lastUpdate": "up"
+    },
+    {
+      "type": "Likes",
+      "icon": "/images/icon-twitter.svg",
+      "number": 507,
+      "percent": 553,
+      "lastUpdate": "up"
+    },
+    {
+      "type": "Likes",
+      "icon": "/images/icon-youtube.svg",
+      "number": 107,
+      "percent": 19,
+      "lastUpdate": "down"
+    },
+    {
+      "type": "Total views",
+      "icon": "/images/icon-youtube.svg",
+      "number": 1407,
+      "percent": 12,
+      "lastUpdate": "down"
+    }
+  ]
+}
