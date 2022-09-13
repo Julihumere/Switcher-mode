@@ -34,8 +34,8 @@ export default function Home({ setMode }) {
         </header>
         <div className={styles.cards}>
           {user &&
-            user.user.map((e, i) => (
-              <div key={e} className={styles.card}>
+            user.user.map((e) => (
+              <div key={e.followers} className={styles.card}>
                 {e.socialMedia === "facebook" ? (
                   <span className={styles.facebook}></span>
                 ) : e.socialMedia === "twitter" ? (
@@ -94,8 +94,8 @@ export default function Home({ setMode }) {
           <h1 className={styles.overview__title}>Overview - Today</h1>
           <div className={styles.overview__cards}>
             {user &&
-              user.Overview.map((e, i) => (
-                <div key={e} className={styles.overview__card}>
+              user.Overview.map((e) => (
+                <div key={e.number} className={styles.overview__card}>
                   <div className={styles.overview__card__top}>
                     <h4>{e.type}</h4>{" "}
                     <Image src={e.icon} width={20} height={20} />
