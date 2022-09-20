@@ -433,6 +433,232 @@
 
 /* DARKMODE */
 
+@media screen and (max-width: 660px) {
+  .container {
+    height: 200vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    height: 35vh;
+    width: 60%;
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+
+  .card:hover {
+    background-color: #333a56;
+    cursor: pointer;
+  }
+
+  .overview__cards {
+    width: 95%;
+    margin-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .overview__card {
+    width: 90%;
+    margin-left: 0;
+  }
+
+  .overview__card:hover {
+    background-color: #333a56;
+    cursor: pointer;
+  }
+
+  .overview__title {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-left: 10%;
+    margin-bottom: 1rem;
+  }
+}
+
+/* LIGHTMODE */
+@media screen and (max-width: 660px) {
+  .container__light {
+    height: 200vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards__light {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card__light {
+    height: 35vh;
+    width: 60%;
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+
+  .card__light:hover {
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+
+  .overview__cards__light {
+    width: 95%;
+    margin-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .overview__card__light {
+    width: 90%;
+    margin-left: 0;
+  }
+
+  .overview__card__light:hover {
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+
+  .overview__title__light {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-left: 10%;
+    margin-bottom: 1rem;
+  }
+}
+
+/* DARKMODE */
+
+@media screen and (max-width: 500px) {
+  .container {
+    height: 200vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    height: 35vh;
+    width: 80%;
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+
+  .card:hover {
+    background-color: #333a56;
+    cursor: pointer;
+  }
+
+  .overview__cards {
+    width: 90%;
+    margin-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .overview__card {
+    width: 90%;
+    margin-left: 0;
+  }
+
+  .overview__card:hover {
+    background-color: #333a56;
+    cursor: pointer;
+  }
+
+  .overview__title {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-left: 10%;
+    margin-bottom: 1rem;
+  }
+}
+
+/* LIGHTMODE */
+@media screen and (max-width: 500px) {
+  .container__light {
+    height: 200vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards__light {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card__light {
+    height: 35vh;
+    width: 80%;
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+
+  .card__light:hover {
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+
+  .overview__cards__light {
+    width: 90%;
+    margin-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .overview__card__light {
+    width: 90%;
+    margin-left: 0;
+  }
+
+  .overview__card__light:hover {
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+
+  .overview__title__light {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-left: 10%;
+    margin-bottom: 1rem;
+  }
+}
+
+/* DARKMODE */
+
 @media screen and (max-width: 375px) {
   .container {
     height: 200vh;
