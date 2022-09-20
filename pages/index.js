@@ -70,8 +70,7 @@ export default function Home() {
                   {e.lastUpdate === "up" ? (
                     <h3 className={styles.up}>
                       <Image src="/images/icon-up.svg" width={8} height={4} />
-                      {e.lastFollowers}
-                      Today
+                      {e.lastFollowers} Today
                     </h3>
                   ) : (
                     <h3 className={styles.down}>
